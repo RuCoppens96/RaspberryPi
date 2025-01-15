@@ -42,3 +42,4 @@ GPIO.cleanup()
 ```
 
 ## Elektrische schema's tekenen
+[Circuit diagram](https://www.circuit-diagram.org/editor/)

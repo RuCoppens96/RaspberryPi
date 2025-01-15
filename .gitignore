@@ -5,6 +5,8 @@ __pycache__/
 
 # Temp files
  Docs/Basics_files/libs/
+*_files/
+*.html 
 
 # C extensions
 *.so
