@@ -36,12 +36,12 @@ def main():
         for i in range(0, len(code_H)):
             hc595_shift(code_L[i])
             hc595_shift(code_H[i])
-            time.sleep(0.1)
+            time.sleep(0.5)
 
         for i in range(len(code_H)-1, -1, -1):
             hc595_shift(code_L[i])
             hc595_shift(code_H[i])
-            time.sleep(0.1)
+            time.sleep(0.5)
 
 def destroy():
     GPIO.cleanup()
