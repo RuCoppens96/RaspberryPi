@@ -19,13 +19,13 @@ def destroy():
 
 # Format as bitstring
 def to_bitstring(x):
-    return format(x, '0>16b')
+    return format(x, '0>8b')
 
 # Shift the data to 74HC595
 def hc595_shift(dat):
-    for bit in range(0, 16): 
-        print("Bit " + bit + "is " + str(0x8000 & (dat << bit)))
-        GPIO.output(SDI, 0x8000 & (dat << bit)) # Very complex but basically this formats as bitstring and sends bits from highest to lowest
+    for bit in range(0, 8): 
+        print("Bit " + bit + "is " + str(0x80 & (dat << bit)))
+        GPIO.output(SDI, 0x80 & (dat << bit)) # Very complex but basically this formats as bitstring and sends bits from highest to lowest
         GPIO.output(SRCLK, GPIO.HIGH)
         time.sleep(0.001)
         GPIO.output(SRCLK, GPIO.LOW)
