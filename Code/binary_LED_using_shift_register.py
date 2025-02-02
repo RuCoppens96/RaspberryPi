@@ -24,6 +24,7 @@ def to_bitstring(x):
 # Shift the data to 74HC595
 def hc595_shift(dat):
     for bit in range(0, 16): 
+        print("Bit " + bit + "is " + str(0x8000 & (dat << bit)))
         GPIO.output(SDI, 0x8000 & (dat << bit)) # Very complex but basically this formats as bitstring and sends bits from highest to lowest
         GPIO.output(SRCLK, GPIO.HIGH)
         time.sleep(0.001)
