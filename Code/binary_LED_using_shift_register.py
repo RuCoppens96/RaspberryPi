@@ -35,7 +35,8 @@ def hc595_shift(dat):
 # Main loop
 def main():
     while True:
-        x = input("Geef nummer in")
+        x = input("Geef nummer in : ")
+        x = int(x)
         print(to_bitstring(x))
         hc595_shift(x)
 
